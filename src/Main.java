@@ -32,4 +32,8 @@ public class Main {
             System.out.println(userName.compareTo("noname"));
             System.out.println("noname ==" + userName);
     }
+
+    public static void uppg3(){
+
+    }
 }

@@ -12,7 +12,8 @@ public class Main {
         //uppg2();
         //uppg3();
         //uppg4();
-        uppg5();
+        //uppg5();
+        uppg6();
     }
 
     public static void uppg1() {
@@ -62,15 +63,50 @@ public class Main {
     public static void uppg5() {
         Scanner myScan = new Scanner(System.in);
         System.out.println("Enter password");
-        String passWord = myScan.nextLine();
+        String passWord = (myScan.nextLine());
 
-        while (passWord) {
 
-            if (passWord = true)
-                break;7
+        while (true) {
+
+            System.out.println("Password is: " + passWord);
+
+            if (Objects.equals(passWord, "Cake")) {
+                break;
+            } else {
+                System.out.println("Incorect password");
+                System.out.println("Enter password");
+                passWord = (myScan.nextLine());
+            }
+
+       /* public static void livTest(){
+        int i= 0;
+            while (true){
+                if(i==5) {
+                    break;
+                }
+                    System.out.println(i);
+                    i++;
+         */
+
         }
+    }
+          public static void uppg6() {
+          Scanner myScan = new Scanner(System.in);
+
+          for (int i=0; i < 5; i++) {
+                       String number = (myScan.nextLine());
+                                   Integer.valueOf();
+                    if(number>5) {
+                        System.out.println("högre än 5!");
+                        break;
+                    }
+
+          }
 
     }
-
-
 }
+
+
+
+
+                       //Booleon isNumber = int.tryparse(nummer, out int trueNumber);

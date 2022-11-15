@@ -13,7 +13,9 @@ public class Main {
         //uppg3();
         //uppg4();
         //uppg5();
-        uppg6();
+        //uppg6();
+        //uppg7();
+        slutovning();
     }
 
     public static void uppg1() {
@@ -90,23 +92,70 @@ public class Main {
 
         }
     }
-          public static void uppg6() {
-          Scanner myScan = new Scanner(System.in);
 
-          for (int i=0; i < 5; i++) {
-                       String number = (myScan.nextLine());
-                                   Integer.valueOf();
-                    if(number>5) {
-                        System.out.println("högre än 5!");
-                        break;
-                    }
+    public static void uppg6() {
+        Scanner myScan = new Scanner(System.in);
 
-          }
+        for (int i = 0; i < 5; i++) {
+            System.out.println("skriv in ett nummer");
+            String str = myScan.nextLine();
+
+            int number = Integer.parseInt(str);
+            System.out.println(number);
+
+            if (number > 5) {
+                System.out.println("Högre än 5!");
+                break;
+
+            } else {
+                System.out.println("Nummret är inte högre än 5");
+            }
+        }
 
     }
+
+    public static void uppg7() {
+        Scanner myScan = new Scanner(System.in);
+        int ord= 0;
+        while(true) {
+
+
+            try {
+                System.out.println("ett tal tack");
+                ord = myScan.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("inte ett tal");
+                myScan.next();
+
+            }
+        }
+
+
+
+    }
+
+    public static void slutovning() {
+        Scanner myScan = new Scanner(System.in);
+        int rattTal = 64;
+        int gissatTal=0;
+
+        while (true) {
+
+
+            try {
+                System.out.println("gissa Tal");
+                gissatTal = myScan.nextInt();
+                if (gissatTal == rattTal) {
+                    System.out.println("Du gissa rätt!");
+                    break;
+                }else if (gissatTal > rattTal) {
+                    System.out.println("Du gissade för högt! Gissa igen");
+                } else {
+                    System.out.println("Du gissade för lågt! Gissa igen"); }
+            } catch (InputMismatchException e) {
+                System.out.println("Inte ett tal");
+                myScan.next(); }
+        }
+    }
 }
-
-
-
-
-                       //Booleon isNumber = int.tryparse(nummer, out int trueNumber);
